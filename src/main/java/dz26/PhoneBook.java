@@ -3,11 +3,14 @@ package dz26;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
 public class PhoneBook {
+    
     private Map<String, ArrayList<String>> book;
     public PhoneBook() {
         book = new HashMap<>();
     }
+    
     public void add(String surname, String phone) {
         if (!book.containsKey(surname)) {
             book.put(surname, new ArrayList<>());
