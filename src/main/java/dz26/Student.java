@@ -3,7 +3,7 @@ package dz26;
 import java.util.ArrayList;
 import java.util.List;
 public class Student {
-   public String name;
+    public String name;
     private String group;
     public int course;
     private List<Integer> grades;
