@@ -3,9 +3,9 @@ package dz26;
 import java.util.ArrayList;
 import java.util.List;
 public class Student {
-   private String name;
+    public String name;
     private String group;
-    private int course;
+    public int course;
     private List<Integer> grades;
     
     public Student(String name, String group, int course, List<Integer> grades) {
