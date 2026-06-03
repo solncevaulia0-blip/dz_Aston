@@ -1,45 +1,42 @@
 package dz27;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertThrows;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class ArithmeticTest {
-@DisplayName("Сложение")
-    @Test
+    @Test(description = "Сложение")
     void addTest() {
         assertEquals(
                 8,
                 Arithmetic.add(5, 3)
         );
     }
-    @DisplayName("Вычитание")
-    @Test
+    @Test(description = "Вычитание")
     void subtractTest() {
         assertEquals(
                 2,
                 Arithmetic.subtract(5, 3)
         );
     }
-    @DisplayName("Умножение")
-    @Test
+    @Test(description = "Умножение")
     void multiplyTest() {
         assertEquals(
                 15,
                 Arithmetic.multiply(5, 3)
         );
     }
-    @DisplayName("Деление")
-    @Test
+
+    @Test(description = "Деление")
     void divideTest() {
         assertEquals(
                 2,
                 Arithmetic.divide(6, 3)
         );
     }
-    @Test
-    @DisplayName("Деление на ноль")
+    @Test(description = ("Деление на ноль"))
     void divideByZeroTest() {
         assertThrows(
                 ArithmeticException.class,

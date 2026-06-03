@@ -1,20 +1,19 @@
 
 package dz27;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+import org.testng.annotations.Test;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class TriangleAreaTest {
-@DisplayName("Площадь 6 и 4")
-    @Test
+    @Test(description = "Площадь 6 и 4")
     void areaTest() {
         assertEquals(
                 12.0,
                 TriangleArea.calculateArea(6, 4)
         );
     }
-    @DisplayName("Площадь 10 и 5")
-    @Test
+    @Test(description = "Площадь 10 и 5")
     void secondAreaTest() {
         assertEquals(
                 25.0,

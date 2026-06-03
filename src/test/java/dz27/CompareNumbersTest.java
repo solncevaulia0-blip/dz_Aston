@@ -1,11 +1,11 @@
 package dz27;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+import org.testng.annotations.Test;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class CompareNumbersTest {
-@DisplayName("Первое больше")
-    @Test
+    @Test(description = "Первое больше")
     void firstNumberIsBigger() {
 
         assertEquals(
@@ -13,16 +13,14 @@ public class CompareNumbersTest {
                 CompareNumbers.compare(10, 5)
         );
     }
-    @DisplayName("Второе больше")
-    @Test
+    @Test(description = "Второе больше")
     void secondNumberIsBigger() {
         assertEquals(
                 "Второе больше",
                 CompareNumbers.compare(5, 10)
         );
     }
-    @DisplayName("Равны")
-    @Test
+    @Test(description = "Равны")
     void numbersAreEqual() {
         assertEquals(
                 "Числа равны",
