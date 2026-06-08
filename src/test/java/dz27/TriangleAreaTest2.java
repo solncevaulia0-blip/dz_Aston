@@ -5,7 +5,7 @@ package dz27;
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class TriangleAreaTest {
+public class TriangleAreaTest2 {
     @Test(description = "Площадь 6 и 4")
     void areaTest() {
         assertEquals(

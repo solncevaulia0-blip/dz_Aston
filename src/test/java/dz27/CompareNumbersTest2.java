@@ -4,7 +4,7 @@ package dz27;
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class CompareNumbersTest {
+public class CompareNumbersTest2 {
     @Test(description = "Первое больше")
     void firstNumberIsBigger() {
 

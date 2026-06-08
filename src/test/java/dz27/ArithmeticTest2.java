@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertThrows;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class ArithmeticTest {
+public class ArithmeticTest2 {
     @Test(description = "Сложение")
     void addTest() {
         assertEquals(

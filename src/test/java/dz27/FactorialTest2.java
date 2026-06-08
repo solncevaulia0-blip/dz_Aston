@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class FactorialTest {
+public class FactorialTest2 {
     @Test(description = "Факториал числа 5")
     void factorialOfFive() {
         assertEquals(120,
