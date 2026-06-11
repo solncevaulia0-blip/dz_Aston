@@ -1,4 +1,4 @@
-package Homework5;
+package dz25;
 
 public class ArrayProcessor {
     public static int sumArray(String[][] array)
