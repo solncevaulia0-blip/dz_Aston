@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 
 public class MtsPage {
 
+    public static final By COOKIE_ACCEPT =
+            By.xpath("//*[@id='cookie-agree']");
+
     public static final By TITLE =
             By.xpath("//*[@id='pay-section']/div/div/div[2]/section/div/h2");
 
@@ -38,10 +41,5 @@ public class MtsPage {
             By.xpath("//*[@id='pay-connection']/button");
 
     public static final By PAYMENT_PAGE_TITLE =
-            By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/div/div[2]/span");
-
-    public static final By COOKIE_ACCEPT =
-            By.xpath("//*[@id='cookie-agree']");
-
+            By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]");
 }
-

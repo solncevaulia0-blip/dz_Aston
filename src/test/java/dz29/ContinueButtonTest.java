@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,7 +13,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BlockTitleTest {
+public class ContinueButtonTest {
 
     WebDriver driver;
     WebDriverWait wait;
@@ -24,7 +25,7 @@ public class BlockTitleTest {
 
         wait = new WebDriverWait(
                 driver,
-                Duration.ofSeconds(20)
+                Duration.ofSeconds(30)
         );
 
         driver.manage().window().maximize();
@@ -51,14 +52,31 @@ public class BlockTitleTest {
     }
 
     @Test
-    void checkBlockTitle() {
+    void checkContinueButton() {
+
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        MtsPage.PHONE_FIELD
+                )
+        ).sendKeys("297777777");
+
+        driver.findElement(
+                MtsPage.SUM_FIELD
+        ).sendKeys("50");
+
+        driver.findElement(
+                MtsPage.EMAIL_FIELD
+        ).sendKeys("test@test.com");
+
+        WebElement button =
+                driver.findElement(
+                        MtsPage.CONTINUE_BUTTON
+                );
 
         assertTrue(
-                wait.until(
-                        ExpectedConditions.visibilityOfElementLocated(
-                                MtsPage.TITLE
-                        )
-                ).getText().contains("Онлайн пополнение")
+                button.isEnabled()
         );
+
+        button.click();
     }
 }
