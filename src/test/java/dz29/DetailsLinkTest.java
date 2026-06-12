@@ -60,7 +60,12 @@ public class DetailsLinkTest {
         ).click();
 
         assertTrue(
-                driver.getCurrentUrl().contains("mts")
+
+                wait.until(
+                        ExpectedConditions.visibilityOfElementLocated(
+                                MtsPage.PAYMENT_CARD_TITLE
+                        )
+                ).getText().contains("Оплата банковской картой")
+
         );
-    }
-}
+    }}

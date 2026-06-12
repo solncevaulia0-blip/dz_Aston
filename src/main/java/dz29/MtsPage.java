@@ -39,6 +39,8 @@ public class MtsPage {
 
     public static final By CONTINUE_BUTTON =
             By.xpath("//*[@id='pay-connection']/button");
+    public static final By PAYMENT_CARD_TITLE =
+            By.xpath("/html/body/div[6]/main/div/div[4]/h3[1]");
 
     public static final By PAYMENT_PAGE_TITLE =
             By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]");
