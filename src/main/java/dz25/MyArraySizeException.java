@@ -1,4 +1,4 @@
-package Homework5;
+package dz25;
 public class MyArraySizeException extends Exception {
     public MyArraySizeException(String message) {
         super(message);
