@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Epic("Онлайн пополнение без комиссии")
 @Feature("Окно платежного шлюза")
-public class PaymentFormTestAllu extends BaseTest2 {
+public class PaymentFormAlluTest extends BaseTest2 {
 
     @Test
     @DisplayName("Проверка корректности данных и элементов в iframe оплаты")

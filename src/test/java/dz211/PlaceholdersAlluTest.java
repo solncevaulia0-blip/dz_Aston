@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Epic("Онлайн пополнение без комиссии")
 @Feature("Проверка плейсхолдеров")
-public class PlaceholdersTestAllu extends BaseTest2 {
+public class PlaceholdersAlluTest extends BaseTest2 {
 
     @Test
     @DisplayName("Проверка надписей в незаполненных полях для всех вариантов оплаты")
