@@ -1,31 +1,34 @@
 package dz210;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlaceholdersTest extends BaseTest {
 
     @Test
     public void checkAllPlaceholders() {
+        // 1. Проверка вкладки «Услуги связи»
+        mtsPage.selectMobileService();
+        assertEquals("Номер телефона", mtsPage.getMobilePlaceholder());
+        assertEquals("Сумма", mtsPage.getSumPlaceholder());
+        assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
 
-        String pageSource =
-                driver.getPageSource();
+        // 2. Проверка вкладки «Домашний интернет»
+        mtsPage.selectHomeInternet();
+        assertEquals("Номер абонента", mtsPage.getInternetPlaceholder());
+        assertEquals("Сумма", mtsPage.getSumPlaceholder());
+        assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
 
-        assertTrue(
-                pageSource.contains("Номер телефона")
-        );
+        // 3. Проверка вкладки «Рассрочка»
+        mtsPage.selectInstallment();
+        assertEquals("Номер счета на 44", mtsPage.getInstallmentPlaceholder());
+        assertEquals("Сумма", mtsPage.getSumPlaceholder());
+        assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
 
-        assertTrue(
-                pageSource.contains("Номер абонента")
-        );
-
-        assertTrue(
-                pageSource.contains("Номер счета на 44")
-        );
-
-        assertTrue(
-                pageSource.contains("Номер счета на 2073")
-        );
+        // 4. Проверка вкладки «Задолженность»
+        mtsPage.selectDebt();
+        assertEquals("Номер счета на 2073", mtsPage.getDebtPlaceholder());
+        assertEquals("Сумма", mtsPage.getSumPlaceholder());
+        assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
     }
 }
