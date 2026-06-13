@@ -1,5 +1,4 @@
 package dz211;
-import dz210.BaseTest;
 
 import io.qameta.allure.*;
         import org.junit.jupiter.api.DisplayName;
@@ -10,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Epic("Онлайн пополнение без комиссии")
 @Feature("Окно платежного шлюза")
-public class PaymentFormTestAllu extends BaseTest {
+public class PaymentFormTestAllu extends BaseTest2 {
 
     @Test
     @DisplayName("Проверка корректности данных и элементов в iframe оплаты")
@@ -19,9 +18,9 @@ public class PaymentFormTestAllu extends BaseTest {
     public void checkPaymentForm() {
 
         Allure.step("Заполнение формы для 'Услуги связи' и переход к оплате", () -> {
-            mtsPage.selectMobileService();
-            mtsPage.fillPaymentForm("297777777", "50", "test@test.com");
-            mtsPage.clickContinue();
+            mtsPage1.selectMobileService();
+            mtsPage1.fillPaymentForm("297777777", "50", "test@test.com");
+            mtsPage1.clickContinue();
         });
 
         Allure.step("Переключение в iframe платежной системы", () -> {

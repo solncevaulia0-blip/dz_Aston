@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Epic("Онлайн пополнение без комиссии")
 @Feature("Проверка плейсхолдеров")
-public class PlaceholdersTestAllu extends BaseTest {
+public class PlaceholdersTestAllu extends BaseTest2 {
 
     @Test
     @DisplayName("Проверка надписей в незаполненных полях для всех вариантов оплаты")
@@ -17,31 +17,31 @@ public class PlaceholdersTestAllu extends BaseTest {
     public void checkAllPlaceholders() {
 
         Allure.step("Проверка вкладки «Услуги связи»", () -> {
-            mtsPage.selectMobileService();
-            assertEquals("Номер телефона", mtsPage.getMobilePlaceholder());
-            assertEquals("Сумма", mtsPage.getSumPlaceholder());
-            assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
+            mtsPage1.selectMobileService();
+            assertEquals("Номер телефона", mtsPage1.getMobilePlaceholder());
+            assertEquals("Сумма", mtsPage1.getSumPlaceholder());
+            assertEquals("E-mail для отправки чека", mtsPage1.getEmailPlaceholder());
         });
 
         Allure.step("Проверка вкладки «Домашний интернет»", () -> {
-            mtsPage.selectHomeInternet();
-            assertEquals("Номер абонента", mtsPage.getInternetPlaceholder());
-            assertEquals("Сумма", mtsPage.getSumPlaceholder());
-            assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
+            mtsPage1.selectHomeInternet();
+            assertEquals("Номер абонента", mtsPage1.getInternetPlaceholder());
+            assertEquals("Сумма", mtsPage1.getSumPlaceholder());
+            assertEquals("E-mail для отправки чека", mtsPage1.getEmailPlaceholder());
         });
 
         Allure.step("Проверка вкладки «Рассрочка»", () -> {
-            mtsPage.selectInstallment();
-            assertEquals("Номер счета на 44", mtsPage.getInstallmentPlaceholder());
-            assertEquals("Сумма", mtsPage.getSumPlaceholder());
-            assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
+            mtsPage1.selectInstallment();
+            assertEquals("Номер счета на 44", mtsPage1.getInstallmentPlaceholder());
+            assertEquals("Сумма", mtsPage1.getSumPlaceholder());
+            assertEquals("E-mail для отправки чека", mtsPage1.getEmailPlaceholder());
         });
 
         Allure.step("Проверка вкладки «Задолженность»", () -> {
-            mtsPage.selectDebt();
-            assertEquals("Номер счета на 2073", mtsPage.getDebtPlaceholder());
-            assertEquals("Сумма", mtsPage.getSumPlaceholder());
-            assertEquals("E-mail для отправки чека", mtsPage.getEmailPlaceholder());
+            mtsPage1.selectDebt();
+            assertEquals("Номер счета на 2073", mtsPage1.getDebtPlaceholder());
+            assertEquals("Сумма", mtsPage1.getSumPlaceholder());
+            assertEquals("E-mail для отправки чека", mtsPage1.getEmailPlaceholder());
         });
     }
 }
